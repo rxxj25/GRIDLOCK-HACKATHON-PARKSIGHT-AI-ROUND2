@@ -1,0 +1,17 @@
+node_modules
+dist
+.git
+.github
+.env
+.env.local
+npm-debug.log*
+dev-stack.log
+vite-dev.log
+outputs
+work
+_gh_pages_publish
+_github_upload
+submission_assets
+*.pptx
+*.png
+*.csv

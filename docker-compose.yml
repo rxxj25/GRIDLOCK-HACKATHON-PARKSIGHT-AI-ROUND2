@@ -1,0 +1,40 @@
+services:
+  db:
+    image: postgres:18
+    container_name: parksight-postgres
+    environment:
+      POSTGRES_DB: parksight_ai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-parksight_password}
+    ports:
+      - "5433:5432"
+    volumes:
+      - parksight-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d parksight_ai"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  app:
+    build: .
+    image: parksight-ai:latest
+    container_name: parksight-ai
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      API_PORT: 8000
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-parksight_password}@db:5432/parksight_ai
+      APP_SESSION_SECRET: ${APP_SESSION_SECRET:-parksight-docker-secret}
+      JUDGE_LOGIN_EMAIL: ${JUDGE_LOGIN_EMAIL:-judge@parksight.ai}
+      JUDGE_LOGIN_PASSWORD: ${JUDGE_LOGIN_PASSWORD:-Judge@123}
+      JUDGE_LOGIN_NAME: ${JUDGE_LOGIN_NAME:-ParkSight Judge}
+      OFFLINE_LOGIN_EMAIL: ${OFFLINE_LOGIN_EMAIL:-officer@parksight.ai}
+      OFFLINE_LOGIN_PASSWORD: ${OFFLINE_LOGIN_PASSWORD:-Password1}
+    ports:
+      - "8000:8000"
+
+volumes:
+  parksight-postgres-data:

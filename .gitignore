@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+!.env.docker.example
+*.log
+
+# Generated/local packaging folders
+outputs/
+work/
+_gh_pages_publish/
+_github_upload/
+
+# Raw source dataset is larger than GitHub's normal file limit.
+jan to may police violation_anonymized791b166 (1).csv
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
