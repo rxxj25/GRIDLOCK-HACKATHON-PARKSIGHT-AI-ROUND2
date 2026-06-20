@@ -1601,7 +1601,7 @@ function AuthGate({ onAuthenticated }) {
 
   return (
     <main className="auth-gate">
-      <video className="auth-video" src="/media/smart-city-login.mp4" autoPlay loop muted playsInline aria-hidden="true" />
+      <video className="auth-video" src={`${import.meta.env.BASE_URL}media/smart-city-login.mp4`} autoPlay loop muted playsInline aria-hidden="true" />
       <div className="auth-video-scrim" />
       <section className="auth-card-shell" aria-label="ParkSight access">
         <form className="auth-card" onSubmit={submitAuth} noValidate>
