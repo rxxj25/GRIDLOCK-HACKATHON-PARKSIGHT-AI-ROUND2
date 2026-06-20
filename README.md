@@ -12,6 +12,12 @@ GitHub Pages:
 https://rxxj25.github.io/GRIDLOCK-HACKATHON-PARKSIGHT-AI-ROUND2/
 ```
 
+## Recording
+
+```text
+https://drive.google.com/file/d/1EGVFbq6H43lNT9DdP1bN9-uO_k3l3pxQ/view?pli=1
+```
+
 Judge demo login:
 
 ```text
