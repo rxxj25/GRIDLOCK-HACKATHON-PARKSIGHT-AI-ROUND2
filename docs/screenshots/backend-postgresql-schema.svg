@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">ParkSight AI backend and PostgreSQL schema</title>
+  <desc id="desc">Backend flow from React dashboard to Express API and PostgreSQL tables for users, dataset uploads, hotspots, stations, and number plates.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#082033" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#607184"/>
+    </marker>
+    <style>
+      .bg { fill: #f7fbf8; }
+      .panel { fill: #ffffff; stroke: #d9e4e1; stroke-width: 2; filter: url(#shadow); }
+      .dark { fill: #0b2435; }
+      .teal { fill: #007a72; }
+      .blue { fill: #2874f0; }
+      .yellow { fill: #ffe500; }
+      .title { font: 700 38px Arial, sans-serif; fill: #13202c; }
+      .subtitle { font: 400 20px Arial, sans-serif; fill: #607184; }
+      .label { font: 700 23px Arial, sans-serif; fill: #13202c; }
+      .small { font: 400 17px Arial, sans-serif; fill: #607184; }
+      .smallDark { font: 400 17px Arial, sans-serif; fill: #d9f7f0; }
+      .white { fill: #ffffff; }
+      .mono { font: 400 16px Consolas, monospace; fill: #d9f7f0; }
+      .pillText { font: 700 16px Arial, sans-serif; fill: #ffffff; }
+      .line { stroke: #607184; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="720"/>
+  <text class="title" x="64" y="74">Backend + PostgreSQL Persistence</text>
+  <text class="subtitle" x="64" y="110">Full-stack mode stores authentication, uploaded datasets, generated hotspots, station rollups, and repeat-plate intelligence.</text>
+
+  <rect class="panel" x="64" y="164" width="260" height="160" rx="18"/>
+  <circle class="teal" cx="100" cy="206" r="20"/>
+  <text class="pillText" x="93" y="212">1</text>
+  <text class="label" x="134" y="213">React Dashboard</text>
+  <text class="small" x="94" y="252">User login, upload flow,</text>
+  <text class="small" x="94" y="278">maps, exports, and action</text>
+  <text class="small" x="94" y="304">queue interactions.</text>
+
+  <rect class="panel" x="410" y="164" width="300" height="160" rx="18"/>
+  <circle class="blue" cx="446" cy="206" r="20"/>
+  <text class="pillText" x="439" y="212">2</text>
+  <text class="label" x="480" y="213">Express API</text>
+  <text class="small" x="440" y="252">Auth, upload sessions,</text>
+  <text class="small" x="440" y="278">dataset result persistence,</text>
+  <text class="small" x="440" y="304">and health checks.</text>
+
+  <rect class="dark" x="800" y="134" width="416" height="238" rx="22"/>
+  <text class="label white" x="836" y="184">PostgreSQL Database</text>
+  <text class="smallDark" x="836" y="222">Database: parksight_ai</text>
+  <text class="mono" x="836" y="262">DATABASE_URL=postgresql://...</text>
+  <text class="mono" x="836" y="292">npm run db:setup</text>
+  <text class="smallDark" x="836" y="330">Schema is created automatically by</text>
+  <text class="smallDark" x="836" y="354">server/schema.sql and server/db.js.</text>
+
+  <path class="line" d="M324 244 H396"/>
+  <path class="line" d="M710 244 H784"/>
+
+  <rect class="panel" x="64" y="414" width="220" height="118" rx="16"/>
+  <text class="label" x="92" y="456">users</text>
+  <text class="small" x="92" y="488">id, full_name, email,</text>
+  <text class="small" x="92" y="512">password_hash</text>
+
+  <rect class="panel" x="320" y="414" width="250" height="118" rx="16"/>
+  <text class="label" x="348" y="456">dataset_uploads</text>
+  <text class="small" x="348" y="488">status, summary, result,</text>
+  <text class="small" x="348" y="512">completed_at</text>
+
+  <rect class="panel" x="606" y="414" width="220" height="118" rx="16"/>
+  <text class="label" x="634" y="456">upload_hotspots</text>
+  <text class="small" x="634" y="488">rank, lat/lng, area,</text>
+  <text class="small" x="634" y="512">impact_score</text>
+
+  <rect class="panel" x="862" y="414" width="220" height="118" rx="16"/>
+  <text class="label" x="890" y="456">upload_stations</text>
+  <text class="small" x="890" y="488">station rollups,</text>
+  <text class="small" x="890" y="512">hotspot counts</text>
+
+  <rect class="panel" x="606" y="562" width="220" height="96" rx="16"/>
+  <text class="label" x="634" y="604">upload_plates</text>
+  <text class="small" x="634" y="636">repeat plates and vehicles</text>
+
+  <path class="line" d="M445 414 V348 H1004 V386"/>
+  <path class="line" d="M570 473 H590"/>
+  <path class="line" d="M826 473 H846"/>
+  <path class="line" d="M716 532 V548"/>
+
+  <rect class="teal" x="64" y="592" width="420" height="50" rx="25"/>
+  <text class="pillText" x="92" y="624">Backend proof: Express + pg Pool + Docker Compose PostgreSQL service</text>
+</svg>

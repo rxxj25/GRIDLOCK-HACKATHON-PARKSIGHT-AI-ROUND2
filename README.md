@@ -21,6 +21,38 @@ Password: Password1
 
 After login, click **Load judge demo** to open the precomputed dashboard immediately. The hosted GitHub Pages build is static, so the demo uses the bundled `public/data/parking_intelligence.json` intelligence file. Local development can also run the Express + PostgreSQL backend for signup, login, and persisted dataset uploads.
 
+## Project Screenshots
+
+These screenshots are included here so judges can quickly inspect the working dashboard, enforcement workflow, and backend persistence design from the repository front page.
+
+### Command Dashboard
+
+![ParkSight AI command dashboard](docs/screenshots/dashboard-command.png)
+
+### Hotspot Map and Congestion Evidence
+
+![ParkSight AI hotspot map](docs/screenshots/hotspot-map.png)
+
+### Vehicle Intelligence
+
+![Vehicle intelligence dashboard](docs/screenshots/vehicle-intel.png)
+
+### Deployment Plan
+
+![Deployment plan dashboard](docs/screenshots/deployment-plan.png)
+
+### Action Queue and Audit Trail
+
+![Action queue](docs/screenshots/action-queue.png)
+
+![Audit trail and model transparency](docs/screenshots/audit-trail.png)
+
+### Backend and PostgreSQL
+
+The full-stack mode uses a Node.js/Express API with PostgreSQL persistence. The database stores authenticated users, dataset upload sessions, generated hotspot rankings, station summaries, and repeated number-plate intelligence.
+
+![Backend and PostgreSQL schema](docs/screenshots/backend-postgresql-schema.svg)
+
 ## Problem
 
 Illegal on-street parking near markets, metro stations, hospitals, and junctions reduces usable road width and blocks turning or crossing movements. Enforcement teams often know where tickets are issued, but not which hotspots create the highest traffic-flow risk.
