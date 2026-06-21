@@ -26,7 +26,7 @@ Email: officer@parksight.ai
 Password: Password1
 ```
 
-After login, unzip **jan to may police violation_anonymized791b166 (1)** to get the dataset, click **Upload dataset** and upload the excel file. The hosted GitHub Pages build is static, so the demo uses the bundled `public/data/parking_intelligence.json` intelligence file. Local development can also run the Express + PostgreSQL backend for signup, login, and persisted dataset uploads.
+After login, unzip **jan to may police violation_anonymized791b166 (1).zip** to get the dataset, click **Upload dataset** and upload the excel file. The hosted GitHub Pages build is static, so the demo uses the bundled `public/data/parking_intelligence.json` intelligence file. Local development can also run the Express + PostgreSQL backend for signup, login, and persisted dataset uploads.
 
 ## Project Screenshots
 
