@@ -26,7 +26,7 @@ Email: officer@parksight.ai
 Password: Password1
 ```
 
-After login, click **Load judge demo** to open the precomputed dashboard immediately. The hosted GitHub Pages build is static, so the demo uses the bundled `public/data/parking_intelligence.json` intelligence file. Local development can also run the Express + PostgreSQL backend for signup, login, and persisted dataset uploads.
+After login, unzip **jan to may police violation_anonymized791b166 (1)** to get the dataset, click **Upload dataset** and upload the excel file. The hosted GitHub Pages build is static, so the demo uses the bundled `public/data/parking_intelligence.json` intelligence file. Local development can also run the Express + PostgreSQL backend for signup, login, and persisted dataset uploads.
 
 ## Project Screenshots
 
@@ -75,7 +75,7 @@ ParkSight AI answers:
 
 1. Open the live demo.
 2. Log in with the judge demo credentials.
-3. Click **Load judge demo**.
+3. Click **Upload dataset** and upload the **jan to may police violation_anonymized791b166 (1)** excel file.
 4. Review the Command view for summary, impact index, and enforcement plan.
 5. Open Hotspot map and switch between Impact, Volume, and Junction layers.
 6. Check Vehicle intel, Number plates, Deployment, What-if lab, Action queue, and Audit trail.
